@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Widget Chatbot Verba</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+    }
+    #chatbot-button {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      margin: 0;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: #7e57c2;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    #chatbot-iframe {
+      position: fixed;
+      bottom: 80px;
+      right: 0;
+      width: 400px;
+      height: 600px;
+      border: none;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      display: none;
+      z-index: 9998;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="chatbot-button">💬</button>
+  <iframe id="chatbot-iframe" src="https://aqua-turkey-970755.hostingersite.com/" allow="clipboard-write"></iframe>
+
+  <script>
+    const btn = document.getElementById('chatbot-button');
+    const iframe = document.getElementById('chatbot-iframe');
+
+    btn.onclick = () => {
+      iframe.style.display = iframe.style.display === 'block' ? 'none' : 'block';
+    };
+  </script>
+</body>
+</html>
